@@ -200,21 +200,23 @@
         <table class="table table-dark">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">
-                        <?php echo $hotelKeys[0]; ?>
+                        <img src="./img/hotel-icon.webp" alt="hotel icon">
                     </th>
                     <th scope="col">
-                        <?php echo $hotelKeys[1]; ?>
+                        <?php echo ucfirst($hotelKeys[0]); ?>
                     </th>
                     <th scope="col">
-                        <?php echo $hotelKeys[2]; ?>
+                        <?php echo ucfirst($hotelKeys[1]); ?>
                     </th>
                     <th scope="col">
-                        <?php echo $hotelKeys[3]; ?>
+                        <?php echo ucfirst($hotelKeys[2]); ?>
                     </th>
                     <th scope="col">
-                        <?php echo $hotelKeys[4]; ?>
+                        <?php echo ucfirst($hotelKeys[3]); ?>
+                    </th>
+                    <th scope="col">
+                        <?php echo ucfirst(str_replace("_", " ", $hotelKeys[4],)); ?>
                     </th>
                 </tr>
             </thead>

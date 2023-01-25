@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+table img {
+    width: 25px;
+    background-color: #FFFFFF;
+}
