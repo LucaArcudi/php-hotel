@@ -53,6 +53,10 @@
 
     ];
     $hotelKeys = array_keys($hotels[0]);
+
+    $userParkingChoice = $_GET["parking-filter"];
+    var_dump($userParkingChoice);
+
     ?>
 
     <main>
@@ -196,6 +200,16 @@
             </p>
         </div> -->
 
+        <form action="./index.php" method="GET">
+            <fieldset>
+                <legend>Parking</legend>
+                <input type="radio" name="parking-filter" value="Si">
+                <label for="css">Si</label><br>
+                <input type="radio" name="parking-filter" value="No">
+                <label for="javascript">No</label>
+            </fieldset>
+            <button type="submit">CERCA</button>
+        </form>
 
         <table class="table table-dark">
             <thead>
@@ -230,13 +244,18 @@
                         <?php echo $hotels[0]["description"]; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[0]["parking"]; ?>
+                        <?php if ($hotels[0]["parking"] == 1) {
+                            echo "Si";
+                        } else {
+                            echo "No";
+                        }
+                        ?>
                     </td>
                     <td>
-                        <?php echo $hotels[0]["vote"]; ?>
+                        <?php echo "{$hotels[0]["vote"]}/5"; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[0]["distance_to_center"]; ?>
+                        <?php echo "{$hotels[0]["distance_to_center"]} km"; ?>
                     </td>
                 </tr>
                 <tr>
@@ -248,13 +267,18 @@
                         <?php echo $hotels[1]["description"]; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[1]["parking"]; ?>
+                        <?php if ($hotels[1]["parking"] == 1) {
+                            echo "Si";
+                        } else {
+                            echo "No";
+                        }
+                        ?>
                     </td>
                     <td>
-                        <?php echo $hotels[1]["vote"]; ?>
+                        <?php echo "{$hotels[1]["vote"]}/5"; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[1]["distance_to_center"]; ?>
+                        <?php echo "{$hotels[1]["distance_to_center"]} km"; ?>
                     </td>
                 </tr>
                 <tr>
@@ -266,13 +290,18 @@
                         <?php echo $hotels[2]["description"]; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[2]["parking"]; ?>
+                        <?php if ($hotels[2]["parking"] == 1) {
+                            echo "Si";
+                        } else {
+                            echo "No";
+                        }
+                        ?>
                     </td>
                     <td>
-                        <?php echo $hotels[2]["vote"]; ?>
+                        <?php echo "{$hotels[2]["vote"]}/5"; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[2]["distance_to_center"]; ?>
+                        <?php echo "{$hotels[2]["distance_to_center"]} km"; ?>
                     </td>
                 </tr>
                 <tr>
@@ -284,13 +313,18 @@
                         <?php echo $hotels[3]["description"]; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[3]["parking"]; ?>
+                        <?php if ($hotels[3]["parking"] == 1) {
+                            echo "Si";
+                        } else {
+                            echo "No";
+                        }
+                        ?>
                     </td>
                     <td>
-                        <?php echo $hotels[3]["vote"]; ?>
+                        <?php echo "{$hotels[3]["vote"]}/5"; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[3]["distance_to_center"]; ?>
+                        <?php echo "{$hotels[3]["distance_to_center"]} km"; ?>
                     </td>
                 </tr>
                 <tr>
@@ -302,13 +336,18 @@
                         <?php echo $hotels[4]["description"]; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[4]["parking"]; ?>
+                        <?php if ($hotels[4]["parking"] == 1) {
+                            echo "Si";
+                        } else {
+                            echo "No";
+                        }
+                        ?>
                     </td>
                     <td>
-                        <?php echo $hotels[4]["vote"]; ?>
+                        <?php echo "{$hotels[4]["vote"]}/5"; ?>
                     </td>
                     <td>
-                        <?php echo $hotels[4]["distance_to_center"]; ?>
+                        <?php echo "{$hotels[4]["distance_to_center"]} km"; ?>
                     </td>
                 </tr>
             </tbody>
